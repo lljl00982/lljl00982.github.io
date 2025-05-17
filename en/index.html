@@ -1,92 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lljl00982's Personal Site</title>
-    <link rel="shortcut icon" href="../img/favicon.ico">
-  </head>
-  <body>
-    <h1 style="text-align:center">Welcome to My Website!</h1>
-    <h1 style="text-align:center">Personal Site of lljl00982</h1>
-    <h1 style="text-align:center"><a style="color:#898989" href="../">中文站点</a></h1>
-    <marquee><h2>WEBSITE UNDER CONSTRUCTION...</h2></marquee>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <style>
+        :root {
+            --text-color: #333;
+            --link-color: #898989;
+            --border-color: #ddd;
+        }
+
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .marquee-container {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%; 
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100vw); 
+            }
+            100% {
+                transform: translateX(-100%); 
+            }
+        }
+        
+        hr {
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--text-color);
+        }
+
+        .poem-container {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        .friend-link img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .friend-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap; 
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to This Website!</h1>
+        <h1>This is lljl00982's personal site</h1>
+        <h1><a href="../index.html">中文页面</a></h1>
+    </header>
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <h2>W E B S I T E &nbsp; U N D E R &nbsp; C O N S T R U C T I O N . . .</h2>
+        </div>
+    </div>
     <hr>
-    <h2>= External Links =</h2>
-    <p><a style="color:#898989" href="https://www.acfun.cn/u/76495899" target="_blank">My AcFun Channel</a></p>
-    <p><a style="color:#898989" href="https://space.bilibili.com/1123553157" target="_blank">My Bilibili Channel</a></p>
-    <p><a style="color:#898989" href="http://bbs.lljl00982.eu.org/" target="_blank">My Forum (Coming Soon)</a></p>
-    <p>More links coming...</p>
+    <section>
+        <h2>= Links & Pages =</h2>
+        <p><a href="https://www.acfun.cn/u/76495899" target="_blank" rel="noopener">My AcFun Account</a></p>
+        <p><a href="https://space.bilibili.com/1123553157" target="_blank" rel="noopener">My BiliBili Account</a></p>
+        <p><a href="http://bbs.lljl00982.eu.org/">My Forum (Not operational yet)</a></p>
+        <p>More to be added...</p>
+    </section>
     <hr>
-    <h2>~ Partner Links ~</h2>
-    <p>
-      <a href="http://www.xiaoxihong.cc/">
-        <img src="../img/xxh_logo_heng_tm.png" alt="Xiao XIhong Official Site" style="width: 200px; height: auto;">
-      </a>
-    </p>
-    <h4>Link exchange welcome <a style="color:#898989" href="./friendlink.html">(Requirements)</a></h4>
+    <section>
+        <h2>~ Friends' Links ~</h2>
+        <div class="friend-links">
+        <a href="http://www.xiaoxihong.cc/" class="friend-link">
+            <img src="./img/xxh_logo_heng_tm.png" alt="Xiao XIhong Official" width="200" height="60">
+        </a>
+        <a href="http://fshrimp.fun/" class="friend-link">
+            <img src="./img/dr_shrimp_logo_heng.png" alt="Fshrimp" width="200" height="60">
+        </a>
+        </div>
+        <h4>Friend link applications welcome <a href="./friendlink.html">(Click for requirements)</a></h4>
+    </section>
     <hr>
+    <section>
     <h2>= About Me =</h2>
     <p>
-      An ordinary dreamer still on the learning path...<br>
+      An ordinary person with unfulfilled dreams, currently still learning...<br>
       Basic HTML skills<br>
-      Novice programmer (Python/Yi Language)<br>
-      Failed software development attempts<br>
-      Fading expertise in Yi Language<br>
+      Minimal programming experience (Python, E-language)<br>
+      Failed attempts at software development<br>
+      Some E-language development experience (gradually fading)<br>
       Socially awkward<br>
-      Enthusiast in Touhou Project/OS/Rhythm games<br>
-      Current passion: Web development<br>
+      Interests: Touhou Project/OS communities/rhythm games (casual involvement)<br>
+      Current hobby: Building small websites<br>
       Maintaining a backup site for friends<br>
-      <del>Always open for collaboration</del>
+      <del>Perpetually broke</del>
     </p>
+    </section>
     <hr>
+    <section>
     <h2>= About This Site =</h2>
     <p>
-      Rebuilt after rebranding<br>
-      Experimenting with creative designs<br>
-      (Though motivation comes and goes)
+      A rewritten personal site after changing online alias<br>
+      Attempting creative implementations<br>
+      Though motivation may fade during development (lol
     </p>
+    </section>
     <hr>
-    <h2>~ IP Geolocation (via tool.lu,Chinese) ~</h2>
+    <section>
+    <h2>~ IP Geolookup (Using <a href="https://tool.lu/" target="_blank">tool.lu</a> API) ~</h2>
     <p><img src="https://tool.lu/netcard/" alt="IP detection"></p>
+    </section>
     <hr>
+    <section>
     <h2>= Contact =</h2>
     <p>
-      Email: lljl00982#hotmail.com (Replace # with @)<br>
+      Email: lljl00982#hotmail.com (Replace "#" with "@")<br>
       QQ: 1985958028<br>
       QQ Group: 977514134
     </p>
-    <p>Consistent username (Maybe): lljl00982</p>
-    <h3>Last Update: May 2, 2025 <i>by lljl00982</i></h3>
-    <p><a style="color:#898989" href="https://github.com/lljl00982/lljl00982.github.io/" target="_blank">View Source on GitHub</a></p>
-    
-    <!-- Uptime counter -->
+    <p>Consistent username across platforms: lljl00982</p>
+    <h3>Last Updated: 2025-05-17 <i>by lljl00982</i></h3>
+    <p><a href="https://github.com/lljl00982/lljl00982.github.io/" target="_blank">View on GitHub</a></p>
     Site uptime: <span id=span_dt_dt></span>
-    <script>
-      function show_date_time(){
-        window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date("2/2/2025 22:30:00");
-        today=new Date();
-        timeold=(today.getTime()-BirthDay.getTime());
-        sectimeold=timeold/1000
-        secondsold=Math.floor(sectimeold);
-        msPerDay=24*60*60*1000
-        e_daysold=timeold/msPerDay
-        daysold=Math.floor(e_daysold);
-        e_hrsold=(e_daysold-daysold)*24;
-        hrsold=Math.floor(e_hrsold);
-        e_minsold=(e_hrsold-hrsold)*60;
-        minsold=Math.floor((e_hrsold-hrsold)*60);
-        seconds=Math.floor((e_minsold-minsold)*60);
-        span_dt_dt.innerHTML=`${daysold} days ${hrsold} hrs ${minsold} mins ${seconds} secs`;
-      }
-      show_date_time();
-    </script>
-
-    <p>
-      Visitors since 2025-04-18:<br>
-      <img src="https://count.getloli.com/@lljl00982?name=lljl00982&theme=gelbooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="Visitor counter"><br>
-      (Approximate count)
-    </p>
     <p>Translate by <a style="color:#898989" href="https://www.deepseek.com/">DeepSeek</a></p>
-  </body>
+    </section>
+    <script>
+            function updateRuntime() {
+                const startDate = new Date("2025-02-02T22:30:00");
+                const now = new Date();
+                const diff = now - startDate;
+                
+                const days = Math.floor(diff / 86400000);
+                const hours = Math.floor((diff % 86400000) / 3600000);
+                const minutes = Math.floor((diff % 3600000) / 60000);
+                const seconds = Math.floor((diff % 60000) / 1000);
+
+                document.getElementById('span_dt_dt').innerHTML = 
+                    `${days} days ${hours} hrs ${minutes} mins ${seconds} secs`;
+                
+                requestAnimationFrame(updateRuntime);
+            }
+            
+            document.addEventListener('DOMContentLoaded', updateRuntime);
+        })();
+    </script>
+</body>
 </html>
