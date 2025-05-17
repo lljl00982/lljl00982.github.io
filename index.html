@@ -1,59 +1,121 @@
-<!--声明文档内容为html-->
 <!DOCTYPE html>
 <html lang="zh">
-<!--网页开始-->
-  <head>
-  <!--网页头部-->
-    <!--设置网页编码为utf-8-->
+<head>
     <meta charset="utf-8">
-    <!--网页标题-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lljl00982个人站点</title>
-    <!--网站图标-->
     <link rel="shortcut icon" href="./img/favicon.ico">
-  </head>
-  <body>
-  <!--网页内容-->
-    <h1 style="text-align:center">欢迎您光临此网站！</h1>
-    <h1 style="text-align:center">本站为lljl00982的个人站</h1>
-    <h1 style="text-align:center"><a style="color:#898989" href="./en/index.html">English Pages</a></h1>
-    <marquee><h2>本 网 站 建 设 中 . . .</h2></marquee>
+    <style>
+        :root {
+            --text-color: #333;
+            --link-color: #898989;
+            --border-color: #ddd;
+        }
+
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        hr {
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--text-color);
+        }
+
+        .poem-container {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        .friend-link img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>欢迎您光临此网站！</h1>
+        <h1>本站为lljl00982的个人站</h1>
+        <h1><a href="./en/index.html">English Pages</a></h1>
+    </header>
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <h2>本 网 站 建 设 中 ...</h2>
+        </div>
+    </div>
     <hr>
-    <h2>= 今日诗词（调用<a style="color:#898989" href="https://www.jinrishici.com/" target="_blank">今日诗词</a>的接口） =</h2>
-    <p>
-      <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-      <div id="poem_sentence"></div>
-      <div id="poem_info"></div>
-      <script type="text/javascript">
-        jinrishici.load(function(result) {
-          var sentence = document.querySelector("#poem_sentence")
-          var info = document.querySelector("#poem_info")
-          sentence.innerHTML = result.data.content
-          info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-        });
-      </script>
-    </p>
+    <section>
+        <h2>今日诗词</h2>
+        <div class="poem-container">
+            <div id="poem_sentence"></div>
+            <div id="poem_info"></div>
+        </div>
+    </section>
     <hr>
-    <h2>= 相关链接/网页 =</h2>
-    <p><a style="color:#898989" href="https://www.acfun.cn/u/76495899" target="_blank">本人AcFun账号</a></p>
-    <!--
-      AC娘专业核弹头翻新、改装，潜艇抛光、喷漆，回收二手航母，大修核反应堆，拆洗导弹发动机，清洗航母油槽，航天飞机保养换三滤。
-      高空作业擦洗卫星表面、除尘，星球设计，全球海洋保养及维护，南极冰川修复，地球形状改造及时空改变颠倒业务；并批发歼10，F22、F35、B2轰炸机，各类氢/核弹头。
-      收集球状闪电 打磨水滴 启动引力波宇宙广播 批发光粒 封装二向箔 擦除死线 高价回收曲率引擎 收容机械类SCP 能量化史隆长城 引爆1998发人类战舰
-      量大从优！有正规发票！若有兴趣请私信猴子。
-    -->
-    <p><a style="color:#898989" href="https://space.bilibili.com/1123553157" target="_blank">本人BiliBili账号</a></p>
-    <p><a style="color:#898989" href="http://bbs.lljl00982.eu.org/" target="_blank">本人论坛（暂未运营）</a></p>
-    <!--废话域名都还没搞好-->
-    <p>待补充...</p>
+    <section>
+        <h2>= 相关链接/网页 =</h2>
+        <p><a href="https://www.acfun.cn/u/76495899" target="_blank" rel="noopener">本人AcFun账号</a></p>
+      <!--
+        AC娘专业核弹头翻新、改装，潜艇抛光、喷漆，回收二手航母，大修核反应堆，拆洗导弹发动机，清洗航母油槽，航天飞机保养换三滤。
+        高空作业擦洗卫星表面、除尘，星球设计，全球海洋保养及维护，南极冰川修复，地球形状改造及时空改变颠倒业务；并批发歼10，F22、F35、B2轰炸机，各类氢/核弹头。
+        收集球状闪电 打磨水滴 启动引力波宇宙广播 批发光粒 封装二向箔 擦除死线 高价回收曲率引擎 收容机械类SCP 能量化史隆长城 引爆1998发人类战舰
+        量大从优！有正规发票！若有兴趣请私信猴子。
+      -->
+        <p><a href="https://space.bilibili.com/1123553157" target="_blank" rel="noopener">本人BiliBili账号</a></p>
+        <p><a href="http://bbs.lljl00982.eu.org/">本人论坛（暂未运营）</a></p>
+        <p>待补充...</p>
+    </section>
     <hr>
-    <h2>~ 友情链接 ~</h2>
-    <p>
-      <a href="http://www.xiaoxihong.cc/">
-        <img src="./img/xxh_logo_heng_tm.png" alt="Xiao XIhong 官网" style="width: 200px; height: auto;">
-      </a>
-    </p>
-    <h4>欢迎各位申请小站友情链接<a style="color:#898989" href="./friendlink.html">（点我查看要求）</a></h4>
+    <section>
+        <h2>~ 友情链接 ~</h2>
+        <a href="http://www.xiaoxihong.cc/" class="friend-link">
+            <img src="./img/xxh_logo_heng_tm.png" alt="Xiao XIhong 官网" width="200" height="60">
+        </a>&nbsp;
+        <a href="http://fshrimp.fun/" class="friend-link">Fshrimp</a>
+        <h4>欢迎各位申请小站友情链接<a href="./friendlink.html">（点我查看要求）</a></h4>
+    </section>
     <hr>
+    <section>
     <h2>= 关于我 =</h2>
     <p>
       一个空有梦想却无法实现的普通人罢了，目前仍在学习。。。<br>
@@ -67,17 +129,23 @@
       帮朋友运营着一个小小的备用站<br>
       <del>常年乞讨</del>
     </p>
+    </section>
     <hr>
+    <section>
     <h2>= 关于此网站 =</h2>
     <p>
       更改网名后重写的一个小网站而已<br>
       尝试写出点花样<br>
       不过写着写着热情可能就消退了吧（笑
     </p>
+    </section>
     <hr>
+    <section>
     <h2>~ ip归属地查询（调用<a style="color:#898989" href="https://tool.lu/" target="_blank">在线工具（tool.lu）</a>的接口） ~</h2>
     <p><img src="https://tool.lu/netcard/" alt="ip检测"></p>
+    </section>
     <hr>
+    <section>
     <h2>= 联系方式 =</h2>
     <p>
       邮箱：lljl00982#hotmail.com （改“#”为“@”）<br>
@@ -85,34 +153,40 @@
       QQ群聊：977514134
     </p>
     <p>全网使用名（应该）统一为lljl00982</p>
-    <h3>最后更新时间：2025-05-10 <i>由 lljl00982 更新</i></h3>
+    <h3>最后更新时间：2025-05-17 <i>由 lljl00982 更新</i></h3>
     <p><a style="color:#898989" href="https://github.com/lljl00982/lljl00982.github.io/" target="_blank">本站Github链接</a></p>
-    <!--网站运行时间（偷过来的）-->
     本站勉强运行:<span id=span_dt_dt></span>
+    </section>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script>
-      function show_date_time(){
-        window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date("2/2/2025 22:30:00");
-        today=new Date();
-        timeold=(today.getTime()-BirthDay.getTime());
-        sectimeold=timeold/1000
-        secondsold=Math.floor(sectimeold);
-        msPerDay=24*60*60*1000
-        e_daysold=timeold/msPerDay
-        daysold=Math.floor(e_daysold);
-        e_hrsold=(e_daysold-daysold)*24;
-        hrsold=Math.floor(e_hrsold);
-        e_minsold=(e_hrsold-hrsold)*60;
-        minsold=Math.floor((e_hrsold-hrsold)*60);
-        seconds=Math.floor((e_minsold-minsold)*60);
-        span_dt_dt.innerHTML='<font>'+daysold+'</font> 天 <font>'+hrsold+'</font> 时 <font>'+minsold+'</font> 分 <font>'+seconds+'</font> 秒';
-      }
-      show_date_time();
+        (function() {
+            // 诗词加载
+            jinrishici.load(function(result) {
+                const { content, origin } = result.data;
+                document.getElementById('poem_sentence').textContent = content;
+                document.getElementById('poem_info').textContent = 
+                    `【${origin.dynasty}】${origin.author}《${origin.title}》`;
+            });
+
+            // 运行时间计算
+            function updateRuntime() {
+                const startDate = new Date("2025-02-02T22:30:00");
+                const now = new Date();
+                const diff = now - startDate;
+                
+                const days = Math.floor(diff / 86400000);
+                const hours = Math.floor((diff % 86400000) / 3600000);
+                const minutes = Math.floor((diff % 3600000) / 60000);
+                const seconds = Math.floor((diff % 60000) / 1000);
+
+                document.getElementById('span_dt_dt').innerHTML = 
+                    `${days} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
+                
+                requestAnimationFrame(updateRuntime);
+            }
+            
+            document.addEventListener('DOMContentLoaded', updateRuntime);
+        })();
     </script>
-    <p>
-      (自2025-04-18起)截至目前共有：<br>
-      <img src="https://count.getloli.com/@lljl00982?name=lljl00982&theme=gelbooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="访问统计"><br>
-      人访问此网站（实际上并不准）
-    </p>
-  </body>
+</body>
 </html>
